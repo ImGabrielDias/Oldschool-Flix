@@ -1,0 +1,104 @@
+/*O root é utilizado para DECLARAR VARIÁVEIS, que devem ser precedidas de ' -- ' */
+:root{
+    --burlyWood: #DEB887;
+    --preta: #141414 ; 
+}
+
+*{   /* O * é usado para atribuir valores a todos os elementos*/                   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*O tamanho das caixas será limitado à borda da caixa,
+    não permitindo que os valores possam extrapolar as bordas das caixas*/
+} 
+/*Elementos base*/
+body{
+    background: var(--preta);
+    /*Fontes adicionais (Times, serif): Caso o Browser não possua a principal, poderá substituir*/                                    
+    font-family: "Arial", Times, serif;
+    color: white;                 
+}
+
+header .container{ /*Abrange a logo e a caixa de navegação*/
+    display: flex ;  /*Habilita usar a FLEXBOX - para alinhamento dos elementos em tela
+    Tendência de 'jogar' todas as coisas para a linha - FLEXDIRECTION*/
+    flex-direction: row; /*Propriedade DEFAULT - Row = "linha"*/                                    
+    align-items: center; /*Alinha VERTICALMENTE*/
+    justify-content: space-between; /*Alinha HORIZONTALMENTE*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: #EDB887;
+    font-family: "Stencil", Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none; /*O 'none' retira o padrão sublinhado dos links*/
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{ /*Muda a cor do link ao passar o mouse por cima*/
+    color: #DEB887;
+
+}
+/*Filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%) ,url(../img/RockyIV.jpg);
+    height: 450px;
+    background-size: cover;
+    display: flex; /*Por padrão, em linha*/
+    flex-direction: column; /*Coluna horizontal*/
+    justify-content: center; /*Fica no centro da coluna*/
+    align-items: flex-start; /*Alinha à esquerda*/
+}
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.filme-principal .titulo{
+    font-size: 40px;
+    margin-top: 15%;
+    margin-bottom: 10px;
+    font-family: 'Impact', Arial, sans-serif;
+}
+.botao{
+    background-color: rgba(0,0,0,50%);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    
+    cursor: pointer; /*Faz o cursor apontar - 'mãozinha' - ao passar pelo botão*/
+    transition: 3s ease all; /*Faz o botão mudar de cor aos poucos, ao passar o mouse*/
+}
+/*Faz o fundo e a escrita do botão mudar ao passar o mouse por cima*/
+.botao:hover{
+    background-color: #EDB887;
+    color: black;
+}
+.botao i{
+    margin-right: 8px;
+}
+.container{
+    margin-left: 30px;
+}
+.filme-principal .container{
+    width: 70%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrossel-filmes{
+    margin-top: 5px;
+} 
+ 

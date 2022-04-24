@@ -1,0 +1,16 @@
+$('.owl-carousel').owlCarousel({
+    loop:true, /*Faz com que o carrosel retorne em looping*/
+    margin:10,
+    nav:false, /*Abas de navegação: < >*/
+    responsive:{ /*Dependendo da quantidade de pixels, o site ajusta o conteúdo*/
+        0:{
+            items:3
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
